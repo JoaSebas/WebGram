@@ -13,15 +13,13 @@
 
 <style>
 
-    body{
-        display: flex;
-        justify-content: center;
-    }
+
     input{
         border: 1px solid rgb(192, 192, 192);
         border-radius:3px; 
-        height: 20px;
+        height: 30px;
         margin: 5px 0;
+        width: 100%;
     }
 
     textarea{
@@ -42,33 +40,61 @@
         background: rgb(136, 136, 136);
         color: white;
     }
+
+    .container-form{
+        display: flex;
+        justify-content: center;
+        background: rgb(82, 22, 150);
+    }
+
     .container-contacto{
-        margin-top: 80px;
+        margin: 20px;
+        padding: 15px;
         display: flex;
         flex-flow: column wrap;
         width: 200px;
         color: rgb(61, 61, 61);
+        border: 1px solid rgb(231, 231, 231);
+        background: #fff;
+    }
+
+    div:nth-child(3){
+        text-align: center;
+        padding: 20px;
     }
 </style>
 
 <body>
+    <div class="nav">
+        <ul>
+            <li><a href="/">Inicio</a></li>
+        </ul>
+
+    </div>
 
     <!-- formulario de  contacto base-->
-
-    <form class="container-contacto" action="/sendMail" method="POST">
-        <h2>Contacto</h2>
-        <label>Nombre</label>
-        <input name="nombre">
-        <label>Apellido</label>
-        <input name="apellido">
-        <label>Correo</label>
-        <input name="correo">
-        <label>Celular</label>
-        <input name="celular">
-        <label>Mensaje</label>
-        <textarea name="mensaje"></textarea>
-        <button type="submit">Enviar</button>
-    </form>
+    <div class="container-form">
+        <form class="container-contacto" action="/sendMail" method="POST">
+            <h2>Contacto</h2>
+            <label>Nombre</label>
+            <input name="nombre">
+            <label>Apellido</label>
+            <input name="apellido">
+            <label>Correo</label>
+            <input name="correo">
+            <label>Celular</label>
+            <input name="celular">
+            <label>Mensaje</label>
+            <textarea name="mensaje"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <div>
+        <h4>Formulario de Contacto</h4><br />
+        <p>Este formulario contiene las propiedades necesarias
+            para el envio de informacion al servidor nodejs.
+        </p>
+    </div>
 
 
     <script src="/reload/reload.js"></script>
